@@ -1,11 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <!-- 项目说明：这里作为聚合工程的父工程 -->
     <groupId>org.linlinjava</groupId>
     <artifactId>litemall</artifactId>
     <version>0.1.0</version>
-    <packaging>pom</packaging>
+    <packaging>pom</packaging> <!-- 打包为pom -->
 
+    <!-- 继承说明：这里继承SpringBoot提供的父工程 -->
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -19,6 +21,7 @@
         <maven.test.skip>true</maven.test.skip>
     </properties>
 
+    <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>litemall-core</module>
         <module>litemall-db</module>
@@ -28,6 +31,7 @@
     </modules>
 
     <dependencyManagement>
+        <!-- 模块说明：这里声明多个子模块 -->
         <dependencies>
             <dependency>
                 <groupId>org.linlinjava</groupId>

@@ -2,8 +2,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <artifactId>litemall-all</artifactId>
-    <packaging>jar</packaging>
+    <packaging>jar</packaging>  <!-- 在这里将该模块打包成jar包  -->
 
+    <!-- 导入父级模块 -->
     <parent>
         <groupId>org.linlinjava</groupId>
         <artifactId>litemall</artifactId>
@@ -11,7 +12,7 @@
     </parent>
 
     <dependencies>
-
+        <!-- 将所有的普通模块导入进来（一定要全部导入) -->
         <dependency>
             <groupId>org.linlinjava</groupId>
             <artifactId>litemall-core</artifactId>
